@@ -1,0 +1,16 @@
+package com.cg.goams.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+public class AddressModel {
+
+	private String addressId;
+	private String userId;
+	private String addressLine;
+	private String city;
+	private String state;
+	private long pincode;
+}

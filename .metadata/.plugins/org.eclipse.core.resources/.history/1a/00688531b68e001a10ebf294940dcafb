@@ -1,0 +1,11 @@
+package com.cg.goms.service;
+
+import java.util.HashMap;
+import java.util.List;
+
+import com.cg.goms.model.OrderModel;
+
+public interface OrderService {
+ 
+	 public List<OrderModel> saveProductsForCheckout(OrderModel model);
+}

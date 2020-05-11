@@ -1,0 +1,63 @@
+package com.cg.goams.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="great_outdoor_address_table")
+public class AddressEntity {
+
+	@Id
+	@Column(name="address_id")
+	private String addressId;
+	@Column(name="user_id")
+	private String userId;
+	@Column(name="address_line")
+	private String addressLine;
+	@Column(name="city")
+	private String city;
+	@Column(name="state")
+	private String state;
+	@Column(name="pincode")
+	private long pincode;
+	public String getAddressId() {
+		return addressId;
+	}
+	public void setAddressId(String addressId) {
+		this.addressId = addressId;
+	}
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+	public String getAddressLine() {
+		return addressLine;
+	}
+	public void setAddressLine(String addressLine) {
+		this.addressLine = addressLine;
+	}
+	public String getCity() {
+		return city;
+	}
+	public void setCity(String city) {
+		this.city = city;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
+	public long getPincode() {
+		return pincode;
+	}
+	public void setPincode(long pincode) {
+		this.pincode = pincode;
+	}
+	
+	
+}

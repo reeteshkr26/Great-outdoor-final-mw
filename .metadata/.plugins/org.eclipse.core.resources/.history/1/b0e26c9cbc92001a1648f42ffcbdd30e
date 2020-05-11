@@ -1,0 +1,13 @@
+package com.cg.goams.service;
+
+import java.util.List;
+
+import com.cg.goams.model.AddressModel;
+
+public interface AddressService {
+	public AddressModel addAddress(AddressModel model);
+	public void deleteAddress(String addressId);
+	public List<AddressModel> getAllAddress(String userId);
+	public AddressModel updateAddress(AddressModel model);
+	public AddressModel findAddressById(String addid);
+}

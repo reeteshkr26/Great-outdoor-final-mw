@@ -1,0 +1,68 @@
+package com.cg.gops.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.cg.gops.entity.ProductEntity;
+import com.cg.gops.model.ProductModel;
+
+public class ProductServiceImpl implements ProductService{
+
+    private ProductEntity of(ProductModel source) {
+    	ProductEntity result=null;
+    	if(source!=null) {
+    		result=new ProductEntity();
+    		result.setProductId(source.getProductId());
+    		result.setProductName(source.getProductName());
+    		result.setProductPrice(source.getProductPrice());
+    		result.setProductCategory(source.getProductCategory());
+    		result.setProductQuantity(source.getProductQuantity());
+    		result.setProductSpecification(source.getProductSpecification());
+    	}
+    	return result;
+   
+    }
+    private ProductModel of(ProductEntity source) {
+    	ProductModel result=null;
+    	if(source!=null) {
+    		result=new ProductModel();
+    		result.setProductId(source.getProductId());
+    		result.setProductName(source.getProductName());
+    		result.setProductPrice(source.getProductPrice());
+    		result.setProductCategory(source.getProductCategory());
+    		result.setProductQuantity(source.getProductQuantity());
+    		result.setProductSpecification(source.getProductSpecification());
+    	}
+    	return result;
+    }
+	@Override
+	public List<ProductModel> getAllProducts() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Optional<ProductEntity> getProductById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ProductModel addProduct(ProductModel productModel) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ProductModel updateProduct(ProductEntity product, ProductModel productDTO) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteProduct(ProductEntity product) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

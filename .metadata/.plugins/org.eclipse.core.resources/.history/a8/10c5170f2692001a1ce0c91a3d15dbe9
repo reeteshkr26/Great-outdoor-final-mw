@@ -1,0 +1,5 @@
+package com.cg.gops.exception;
+
+public class ProductException {
+
+}

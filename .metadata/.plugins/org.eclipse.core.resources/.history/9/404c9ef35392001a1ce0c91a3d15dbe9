@@ -1,0 +1,34 @@
+package com.cg.gowms.dao;
+
+import java.util.List;
+import java.util.Optional;
+
+import javax.transaction.Transactional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.cg.gowms.entity.WishlistEntity;
+
+
+@Repository
+public interface WishlistRepository extends JpaRepository<WishlistEntity,Long>{
+	
+	public List<WishlistEntity> findAllByUserId(String userId);
+	
+	@Query("select w from WishlistEntity w where w.userId=?2 and w.productId=?1")
+	Optional<WishlistEntity> findByIdAndUserId(String productId,String userId);
+	
+	@Modifying
+    @Transactional
+	@Query("DELETE  FROM WishlistEntity w WHERE w.productId=?1   and w.userId=?2")
+	void deleteByIdAndUserId(String productId, String userId);
+	
+	@Modifying
+    @Transactional
+	@Query("DELETE w FROM WishlistEntity w WHERE w.userId=?1")
+	void deleteByUserId(String userId);
+
+}

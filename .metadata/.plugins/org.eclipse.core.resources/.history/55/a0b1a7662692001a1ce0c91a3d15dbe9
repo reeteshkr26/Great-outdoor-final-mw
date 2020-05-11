@@ -1,0 +1,5 @@
+package com.cg.gops.dao;
+
+public interface ProductRepositrory {
+
+}

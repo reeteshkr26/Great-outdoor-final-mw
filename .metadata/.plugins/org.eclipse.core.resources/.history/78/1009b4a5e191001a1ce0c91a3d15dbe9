@@ -1,0 +1,11 @@
+package com.cg.goum.service;
+
+import com.cg.goum.exception.UserException;
+import com.cg.goum.model.UserModel;
+
+public interface UserService throws UserException {
+	
+	public UserModel userRegistration(UserModel user);
+	public UserModel userLogin(String userId, String password);
+
+}

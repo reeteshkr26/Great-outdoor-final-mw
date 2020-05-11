@@ -1,0 +1,5 @@
+package com.cg.goum.controller;
+
+public class UserExceptionAdvice {
+
+}

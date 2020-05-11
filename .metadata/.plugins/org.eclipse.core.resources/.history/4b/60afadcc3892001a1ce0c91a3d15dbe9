@@ -1,0 +1,5 @@
+package com.cg.gocms.model;
+
+public class ProductModel {
+
+}

@@ -1,0 +1,82 @@
+package com.cg.goms.service;
+
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cg.goms.dao.OrderRepo;
+import com.cg.goms.entity.OrderEntity;
+import com.cg.goms.exception.OrderException;
+import com.cg.goms.model.OrderModel;
+
+@Service
+public class OrderServiceImpl implements OrderService{
+	@Autowired
+	private OrderRepo repo;
+
+	private OrderEntity of(OrderModel source) {
+		OrderEntity result=null;
+		if(source!=null) {
+			result = new OrderEntity();
+			result.setUserId(source.getUserId());
+			result.setOrderId(source.getOrderId());
+			result.setAddressId(source.getAddressId());
+			result.setProductId(source.getProductId());
+			result.setPaymentType(source.getPaymentType());
+			result.setPrice(source.getPrice());
+			result.setItemQuantity(source.getItemQuantity());
+			result.setOrderInitiateTime(result.getOrderInitiateTime());
+			result.setOrderDispatchTime(source.getOrderDispatchTime());
+			result.setDispatchStatus(source.getDispatchStatus());
+			
+	
+		}
+		return result;
+	}
+    private OrderModel of(OrderEntity source) {
+    	OrderModel result=null;
+		if(source!=null) {
+			result = new OrderModel();
+			result.setId(source.getId());
+			result.setUserId(source.getUserId());
+			result.setOrderId(source.getOrderId());
+			result.setAddressId(source.getAddressId());
+			result.setProductId(source.getProductId());
+			result.setPaymentType(source.getPaymentType());
+			result.setPrice(source.getPrice());
+			result.setItemQuantity(source.getItemQuantity());
+			result.setOrderInitiateTime(result.getOrderInitiateTime());
+			result.setOrderDispatchTime(source.getOrderDispatchTime());
+			result.setDispatchStatus(source.getDispatchStatus());
+		
+		}
+		return result;
+	}
+
+	@Override
+	public List<OrderModel> saveProductsForCheckout(List<OrderModel> modelList) throws Exception{
+		try {
+			List<OrderEntity> itemList=new ArrayList<>();
+			for(OrderModel orderModel:modelList) {
+				itemList.add(of(orderModel));
+			}
+			return repo.saveAll(itemList).stream().map((entity)->of(entity)).collect(Collectors.toList());
+		}
+		catch(Exception e) {
+			throw new Exception("Error while checkout "+e.getMessage());
+		}
+		
+	}
+	@Override
+	public List<OrderModel> getAllOrderList(String userId) {
+		
+		return repo.findAllByUserId(userId).stream().map((entity)->of(entity)).collect(Collectors.toList());
+	}
+	
+	
+
+}

@@ -1,0 +1,55 @@
+package com.cg.goams.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.cg.goams.dao.AddressRepo;
+import com.cg.goams.entity.AddressEntity;
+import com.cg.goams.exception.AddressException;
+import com.cg.goams.model.AddressModel;
+
+public class AddressServiceImpl implements AddressService{
+
+	@Autowired
+	private AddressRepo addressRepo;
+	
+	private AddressEntity of(AddressModel source) {
+		AddressEntity result=null;
+		if(source!=null) {
+			result=new AddressEntity();
+			
+		}
+		return result;
+	}
+	@Override
+	public AddressModel addAddress(AddressModel model) throws AddressException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteAddress(String addressId) throws AddressException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<AddressModel> getAllAddress(String userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public AddressModel updateAddress(AddressModel model) throws AddressException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public AddressModel findAddressById(String addid) throws AddressException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

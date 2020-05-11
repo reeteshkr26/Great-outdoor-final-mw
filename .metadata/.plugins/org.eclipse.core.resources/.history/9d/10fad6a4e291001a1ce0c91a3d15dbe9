@@ -1,0 +1,60 @@
+package com.cg.goum.service;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.cg.goum.dao.UserRepo;
+import com.cg.goum.entity.UserEntity;
+import com.cg.goum.exception.UserException;
+import com.cg.goum.model.UserModel;
+
+@Service
+public class UserServiceImpl implements UserService{
+
+	@Autowired
+	private UserRepo userRepo;
+	
+	private UserModel of(UserEntity source) {
+		UserModel result=null;
+		if(source!=null) {
+			result=new UserModel();
+			result.setUserId(source.getUserId());
+			result.setPassword(source.getPassword());
+			result.setEmail(source.getEmail());
+			result.setPhoneNo(source.getPhoneNo());
+			result.setUserRole(source.getUserRole());
+			result.setLoginToken(source.getLoginToken());
+		}
+		return result;
+	}
+	private UserEntity of(UserModel source) {
+		UserEntity result=null;
+		if(source!=null) {
+			result=new UserEntity();
+			result.setUserId(source.getUserId());
+			result.setPassword(source.getPassword());
+			result.setEmail(source.getEmail());
+			result.setPhoneNo(source.getPhoneNo());
+			result.setUserRole(source.getUserRole());
+			result.setLoginToken(source.getLoginToken());
+		}
+		return result;
+	}
+	
+	@Override
+	public UserModel userRegistration(UserModel user) throws UserException{
+		if(userRepo.existsById(user.getUserId())) {
+			throw new UserException("User already have registered !");
+		}
+		return null;
+	}
+
+	@Override
+	public UserModel userLogin(String userId, String password)  throws UserException{
+		Optional<UserEntity> user=userRepo.getUser(userId, password)
+		return user.isPresent()? of(user.get()):null;
+	}
+
+}

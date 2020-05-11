@@ -1,0 +1,13 @@
+package com.cg.goum;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class GreatOutdoorUserManagementMicroServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(GreatOutdoorUserManagementMicroServiceApplication.class, args);
+	}
+
+}

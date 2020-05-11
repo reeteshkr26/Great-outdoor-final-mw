@@ -1,0 +1,13 @@
+package com.cg.goexs;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class GreatOutdoorExternalConfigMicroServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(GreatOutdoorExternalConfigMicroServiceApplication.class, args);
+	}
+
+}

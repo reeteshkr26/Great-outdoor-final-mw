@@ -1,0 +1,9 @@
+package com.cg.goams.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.cg.goams.entity.AddressEntity;
+
+public interface AddressRepo extends JpaRepository<AddressEntity,String>{
+
+}

@@ -1,0 +1,23 @@
+package com.cg.goim.dao;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import com.cg.goim.entity.RetailerInventoryEntity;
+
+import feign.Param;
+
+
+@Repository
+public interface RetailerInventoryDao extends JpaRepository<RetailerInventoryEntity,String> {
+  
+
+   List<RetailerInventoryEntity> findAllByRetailerId(String retailerId);
+   
+   @Query("SELECT r FROM RetailerInventoryEntity r WHERE r.retailerId:=rid AND r.productId:=pid")
+   Optional<RetailerInventoryEntity> findByProductId(@Param("pid")String productId,@Param("rid")String retailerId);
+}

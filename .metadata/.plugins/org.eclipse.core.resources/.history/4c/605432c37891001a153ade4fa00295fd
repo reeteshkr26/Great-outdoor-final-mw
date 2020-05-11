@@ -1,0 +1,5 @@
+package com.cg.goum.dao;
+
+public interface UserRepo {
+
+}

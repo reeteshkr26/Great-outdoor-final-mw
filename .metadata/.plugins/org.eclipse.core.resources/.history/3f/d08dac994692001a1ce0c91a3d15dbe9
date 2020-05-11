@@ -1,0 +1,9 @@
+package com.cg.gowms.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.cg.gowms.entity.WishlistEntity;
+
+public interface WishlistRepository extends JpaRepository<WishlistEntity,Long>{
+
+}

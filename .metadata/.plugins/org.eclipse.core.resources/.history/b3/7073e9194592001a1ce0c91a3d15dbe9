@@ -1,0 +1,5 @@
+package com.cg.gowms.exception;
+
+public class WishlistExceptionHandler {
+
+}

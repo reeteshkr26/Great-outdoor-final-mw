@@ -1,0 +1,16 @@
+
+®
+java:S1319&"vThe type of the "addCartRequest" object should be an interface such as "Map" rather than the implementation "HashMap".(¢™€Äûÿÿÿÿ8¹è½.Hô
+RMINORZ
+CODE_SMELL
+\
+java:S1452a"&Remove usage of generic wildcard type.(ÛÜä8­Íº.Hõ
+RCRITICALZ
+CODE_SMELL
+¢
+java:S1319a"oThe type of the "request" object should be an interface such as "Map" rather than the implementation "HashMap".(ÛÜä8Ñ®‹».Hö
+RMINORZ
+CODE_SMELL
+s	java:S125*"<This block of commented-out lines of code should be removed.(³•İÖüÿÿÿÿ8Íıø¢.H÷
+RMAJORZ
+CODE_SMELL

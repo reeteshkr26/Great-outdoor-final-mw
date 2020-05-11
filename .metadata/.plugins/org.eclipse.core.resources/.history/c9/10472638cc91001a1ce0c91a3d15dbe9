@@ -1,0 +1,13 @@
+package com.cg.godm;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class GreatOutdoorDiscoveryMicroServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(GreatOutdoorDiscoveryMicroServiceApplication.class, args);
+	}
+
+}

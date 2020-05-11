@@ -1,0 +1,13 @@
+package com.cg.goms.entity;
+
+import java.time.LocalDate;
+
+public class OrderEntity {
+	private String orderId;
+	private String userId;
+	private String addressId;
+	private int dispatchStatus;
+	private LocalDate OrderInitiateTime; 
+	private LocalDate orderDispatchTime;
+
+}

@@ -1,0 +1,5 @@
+package com.cg.gowms.model;
+
+public class WishlistModel {
+
+}

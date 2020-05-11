@@ -1,0 +1,118 @@
+package com.cg.goim.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "great_outdoor_retailer_inventory_tavle")
+public class RetailerInventoryEntity {
+	
+	@Id
+	@Column(name = "INVENTORY_ID")
+	private String inventoryId;
+	
+	@Column(name = "RETAILER_ID", nullable = false)
+	private String retailerId;
+
+	@Column(name = "PRODUCT_CATEGORY", nullable = false)
+	private String productCategory;
+	
+	@Id
+	@Column(name = "PRODUCT_UID", nullable = false)
+	private String productId;
+	
+	@Column(name = "PRODUCT_NAME", nullable = false)
+	private String productName;
+	
+	@Column(name = "PRODUCT_QUANTITY", nullable = false)
+	private Integer productQuantity;
+	
+	@Column(name = "TOTAL_AMOUNT", nullable = false)
+	private Double totalAmount;
+
+	@Column(name = "PRODUCT_RECEIVE_TIME", nullable = false)
+	private long productReceiveTimeStamp; 
+	
+	@Column(name = "PRODUCT_SALE_TIME", nullable = false)
+    private long productSaleTimeStamp; 
+
+  
+	
+	public String getInventoryId() {
+		return inventoryId;
+	}
+
+	public void setInventoryId(String inventoryId) {
+		this.inventoryId = inventoryId;
+	}
+
+	public String getRetailerId() {
+		return retailerId;
+	}
+
+	public void setRetailerId(String retailerId) {
+		this.retailerId = retailerId;
+	}
+
+	public String getProductCategory() {
+		return productCategory;
+	}
+
+	public void setProductCategory(String productCategory) {
+		this.productCategory = productCategory;
+	}
+
+	
+	public String getProductId() {
+		return productId;
+	}
+
+	public void setProductId(String productId) {
+		this.productId = productId;
+	}
+
+	public String getProductName() {
+		return productName;
+	}
+
+	public void setProductName(String productName) {
+		this.productName = productName;
+	}
+
+	public Integer getProductQuantity() {
+		return productQuantity;
+	}
+
+	public void setProductQuantity(Integer productQuantity) {
+		this.productQuantity = productQuantity;
+	}
+
+	public Double getTotalAmount() {
+		return totalAmount;
+	}
+
+	public void setTotalAmount(Double totalAmount) {
+		this.totalAmount = totalAmount;
+	}
+
+	public long getProductReceiveTimeStamp() {
+		return productReceiveTimeStamp;
+	}
+
+	public void setProductReceiveTimeStamp(long productReceiveTimeStamp) {
+		this.productReceiveTimeStamp = productReceiveTimeStamp;
+	}
+
+	public long getProductSaleTimeStamp() {
+		return productSaleTimeStamp;
+	}
+
+	public void setProductSaleTimeStamp(long productSaleTimeStamp) {
+		this.productSaleTimeStamp = productSaleTimeStamp;
+	}
+	
+	
+
+}

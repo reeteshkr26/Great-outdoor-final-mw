@@ -1,0 +1,5 @@
+package com.cg.goum.exception;
+
+public class UserException {
+
+}

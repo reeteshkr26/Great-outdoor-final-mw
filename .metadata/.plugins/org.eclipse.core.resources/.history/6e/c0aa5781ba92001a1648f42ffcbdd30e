@@ -1,0 +1,5 @@
+package com.cg.goams.dao;
+
+public interface AddressRepo {
+
+}

@@ -1,0 +1,5 @@
+package com.cg.gocms.service;
+
+public interface ProductProxyService {
+
+}

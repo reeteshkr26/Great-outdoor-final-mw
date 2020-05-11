@@ -1,0 +1,5 @@
+package com.cg.gops.entity;
+
+public class ProductEntity {
+
+}

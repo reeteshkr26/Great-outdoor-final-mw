@@ -1,0 +1,15 @@
+package com.cg.gops.dao;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.cg.gops.entity.ProductEntity;
+
+@Repository
+public interface ProductRepository  extends JpaRepository<ProductEntity,String> {
+    public List<ProductEntity> findAllByIsDeletedIsFalse();
+    public Optional<ProductEntity> findByProductUID(String id);
+}

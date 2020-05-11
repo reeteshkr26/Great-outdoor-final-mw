@@ -1,0 +1,13 @@
+package com.cg.goams;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class GreatOutdoorAddressManagementMicroServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(GreatOutdoorAddressManagementMicroServiceApplication.class, args);
+	}
+
+}

@@ -1,0 +1,14 @@
+package com.cg.goum.dao;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import com.cg.goum.entity.UserEntity;
+
+public interface UserRepo extends JpaRepository<UserEntity,String> {
+	
+	@Query("Select u FROM UserEntity u WHERE u.userName= :uName and u.password=:pass")
+	public UserEntity getUser(@Param("uName") String uName,@Param("uName") String pass);
+
+}

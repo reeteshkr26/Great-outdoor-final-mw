@@ -1,0 +1,5 @@
+package com.cg.gops.controller;
+
+public class ProductController {
+
+}

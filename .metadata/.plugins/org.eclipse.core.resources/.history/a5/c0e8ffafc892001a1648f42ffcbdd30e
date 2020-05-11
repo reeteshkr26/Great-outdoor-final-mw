@@ -1,0 +1,16 @@
+package com.cg.goim.dao;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.cg.goim.entity.RetailerInventoryEntity;
+
+
+@Repository
+public interface RetailerInventoryDao extends JpaRepository<RetailerInventoryEntity,Long> {
+  
+
+   List<RetailerInventoryEntity> findAllByRetailerId(String retailerId);
+}

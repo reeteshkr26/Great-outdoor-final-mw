@@ -1,0 +1,27 @@
+package com.cg.gowms.service;
+
+import java.util.List;
+
+import com.cg.gowms.model.WishlistModel;
+
+public class WishlistServiceImpl implements WishlistService{
+
+	@Override
+	public List<WishlistModel> findAll(String userId) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteById(String productId, String userId) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void save(WishlistModel wishlist) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

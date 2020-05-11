@@ -1,0 +1,5 @@
+package com.cg.goum.model;
+
+public class UserModel {
+
+}

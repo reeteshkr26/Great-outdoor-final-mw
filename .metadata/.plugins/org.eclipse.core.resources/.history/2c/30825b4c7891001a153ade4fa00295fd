@@ -1,0 +1,74 @@
+package com.cg.goum.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="great_outdoor_user_table")
+public class UserEntity {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	private long id;
+	@Column(name="user_id")
+	private String userId;
+	@Column(name="user_name")
+	private String userName;
+	@Column(name="password")
+	private String password;
+	@Column(name="email")
+	private String email;
+	@Column(name="phone_number")
+	private String phoneNo;
+	@Column(name="login_token")
+	private String login_token;
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+	public String getUserName() {
+		return userName;
+	}
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPhoneNo() {
+		return phoneNo;
+	}
+	public void setPhoneNo(String phoneNo) {
+		this.phoneNo = phoneNo;
+	}
+	public String getLogin_token() {
+		return login_token;
+	}
+	public void setLogin_token(String login_token) {
+		this.login_token = login_token;
+	}
+	
+	
+	
+
+}

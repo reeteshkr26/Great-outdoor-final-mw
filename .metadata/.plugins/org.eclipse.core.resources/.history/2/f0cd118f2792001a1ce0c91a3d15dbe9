@@ -1,0 +1,5 @@
+package com.cg.gops.service;
+
+public class ProductServiceImpl {
+
+}

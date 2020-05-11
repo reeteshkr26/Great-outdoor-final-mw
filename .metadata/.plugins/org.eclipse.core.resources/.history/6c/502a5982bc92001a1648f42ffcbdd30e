@@ -1,0 +1,5 @@
+package com.cg.goams.service;
+
+public interface AddressService {
+
+}

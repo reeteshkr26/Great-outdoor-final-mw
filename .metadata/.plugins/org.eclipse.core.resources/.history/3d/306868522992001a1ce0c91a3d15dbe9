@@ -1,0 +1,17 @@
+package com.cg.gops.service;
+
+import java.util.List;
+import java.util.Optional;
+
+import com.cg.gops.entity.ProductEntity;
+import com.cg.gops.model.ProductModel;
+
+public interface ProductService {
+	
+	    public List<ProductModel> getAllProducts();
+	    public ProductEntity getProductById(String id);
+	    public ProductModel addProduct(ProductModel productModel);
+	    public ProductModel updateProduct(ProductEntity product, ProductModel productDTO);
+	    public void deleteProduct(ProductEntity product);
+
+}

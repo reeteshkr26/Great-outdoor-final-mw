@@ -1,0 +1,5 @@
+package com.cg.gowms.entity;
+
+public class WishlistEntity {
+
+}

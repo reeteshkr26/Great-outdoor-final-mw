@@ -1,0 +1,23 @@
+package com.cg.goum.controller;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.cg.goum.model.UserModel;
+
+@RestController
+@RequestMapping("/user")
+@CrossOrigin
+public class UserController {
+	
+	@GetMapping("/login/{userId}/{pass}")
+	public ResponseEntity<UserModel> userLogin(@PathVariable("userId") String userId,@PathVariable("pass") String pass) {
+		return null
+		
+	}
+
+}

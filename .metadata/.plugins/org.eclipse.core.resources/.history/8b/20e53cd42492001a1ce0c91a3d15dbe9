@@ -1,0 +1,42 @@
+package com.cg.gops.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="great_outdoor_product_table")
+public class ProductEntity {
+	
+	    @Id
+	    @Column(name="product_id")
+	    private String productId;
+	    
+	    @Column(name="product_name",nullable=false)
+	    private String productName;
+	    
+	    @Column(name="product_price",nullable=false)
+	    private Integer productPrice;
+	    
+	    @Column(name="product_color",nullable=false)
+	    private String productColor;
+	    
+	    @Enumerated(EnumType.STRING)
+	    @Column(name="product_category",nullable=false)
+	    private ProductCategory productCategory;
+	    
+	    @Column(name="product_quantiy",nullable=false)
+	    private Integer productQuantity;
+	    
+	    @Column(name="product_specification")
+	    private String productSpecification;
+
+	    @Column(columnDefinition = "boolean default false")
+	    private Boolean isDeleted = Boolean.FALSE;
+	    
+	    
+
+}

@@ -1,0 +1,22 @@
+package com.cg.gowms.dao;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.cg.gowms.entity.WishlistEntity;
+
+import feign.Param;
+
+public interface WishlistRepository extends JpaRepository<WishlistEntity,Long>{
+	
+	public List<WishlistEntity> findAllByUserId(String userId);
+	
+	@Query("DELETE FROM WishlistEntity w WHERE w.productId=:product_id AND w.userId=:user_id")
+	public void deleteByIdAndUserId(@Param("product_id")String productId,@Param("user_id")String userId);
+	
+	@Query("DELETE FROM WishlistEntity w WHERE w.userId=:user_id")
+	public void deleteByUserId(@Param("user_id")String userId);
+
+}
