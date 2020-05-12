@@ -8,11 +8,13 @@ public class RetailerInventoryModel {
 	private String productCategory;
 	private String productId;
 	private String productName;
+	private String productColor;
+	private String productSpecification;
 	private int productQuantity;
 	private double totalAmount;
 	private long productReceiveTimeStamp;
 	private long productSaleTimeStamp; 
-
+	 private double productActualPrice;
 	
 	public String getInventoryId() {
 		return inventoryId;
@@ -69,8 +71,25 @@ public class RetailerInventoryModel {
 	public void setProductSaleTimeStamp(long productSaleTimeStamp) {
 		this.productSaleTimeStamp = productSaleTimeStamp;
 	}
+	public String getProductColor() {
+		return productColor;
+	}
+	public void setProductColor(String productColor) {
+		this.productColor = productColor;
+	}
+	public String getProductSpecification() {
+		return productSpecification;
+	}
+	public void setProductSpecification(String productSpecification) {
+		this.productSpecification = productSpecification;
+	}
 	
-	
+	public double getProductActualPrice() {
+		return productActualPrice;
+	}
+	public void setProductActualPrice(double productActualPrice) {
+		this.productActualPrice = productActualPrice;
+	}
 	
 	
 

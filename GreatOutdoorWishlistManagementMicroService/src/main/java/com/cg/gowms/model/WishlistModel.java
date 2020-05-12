@@ -11,6 +11,7 @@ public class WishlistModel {
     private String productCategory;
     private Integer productQuantity;
     private String productSpecification;
+   
     
 	public long getWishListId() {
 		return wishListId;
@@ -66,5 +67,7 @@ public class WishlistModel {
 	public void setProductSpecification(String productSpecification) {
 		this.productSpecification = productSpecification;
 	}
+
+	
 	
 }

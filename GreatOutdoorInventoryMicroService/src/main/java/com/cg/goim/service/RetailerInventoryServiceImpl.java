@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 import com.cg.goim.dao.RetailerInventoryDao;
 import com.cg.goim.entity.RetailerInventoryEntity;
 import com.cg.goim.exception.RetailerInventoryException;
+import com.cg.goim.model.ProductModel;
 import com.cg.goim.model.RetailerInventoryModel;
 
 
@@ -18,7 +19,24 @@ public class RetailerInventoryServiceImpl implements RetailerInventoryService{
 
 	@Autowired
 	private RetailerInventoryDao retailerDao;
+	
+	@Autowired
+	private ProductProxyService productProxyService;
 
+	private RetailerInventoryEntity of(RetailerInventoryModel source) {
+		RetailerInventoryEntity result=null;
+		if(source!=null) {
+			result=new RetailerInventoryEntity();
+			result.setInventoryId(source.getInventoryId());
+			result.setRetailerId(source.getRetailerId());
+			result.setProductId(source.getProductId());
+			result.setProductQuantity(source.getProductQuantity());
+			result.setTotalAmount(source.getTotalAmount());
+			result.setProductReceiveTimeStamp(source.getProductReceiveTimeStamp());
+			result.setProductSaleTimeStamp(source.getProductSaleTimeStamp());
+		}
+		return result;
+	}
 	
 	private RetailerInventoryModel of(RetailerInventoryEntity source) {
 		RetailerInventoryModel result=null;
@@ -26,33 +44,25 @@ public class RetailerInventoryServiceImpl implements RetailerInventoryService{
 			result=new RetailerInventoryModel();
 			result.setInventoryId(source.getInventoryId());
 			result.setRetailerId(source.getRetailerId());
-			result.setProductCategory(source.getProductCategory());
 			result.setProductId(source.getProductId());
-			result.setProductName(source.getProductName());
 			result.setProductQuantity(source.getProductQuantity());
 			result.setTotalAmount(source.getTotalAmount());
 			result.setProductReceiveTimeStamp(source.getProductReceiveTimeStamp());
 			result.setProductSaleTimeStamp(source.getProductSaleTimeStamp());
+			
+			ProductModel product=productProxyService.getProduct(source.getProductId());
+			if(product!=null) {
+				result.setProductName(product.getProductName());
+				result.setProductCategory(product.getProductCategory());
+				result.setProductColor(product.getProductColor());
+				result.setProductActualPrice(product.getProductPrice());
+				result.setProductSpecification(product.getProductSpecification());
+			}
 		}
 		return result;
 	}
 	
-	private RetailerInventoryEntity of(RetailerInventoryModel source) {
-		RetailerInventoryEntity result=null;
-		if(source!=null) {
-			result=new RetailerInventoryEntity();
-			result.setInventoryId(source.getInventoryId());
-			result.setRetailerId(source.getRetailerId());
-			result.setProductCategory(source.getProductCategory());
-			result.setProductId(source.getProductId());
-			result.setProductName(source.getProductName());
-			result.setProductQuantity(source.getProductQuantity());
-			result.setTotalAmount(source.getTotalAmount());
-			result.setProductReceiveTimeStamp(source.getProductReceiveTimeStamp());
-			result.setProductSaleTimeStamp(source.getProductSaleTimeStamp());
-		}
-		return result;
-	}
+
 
 	@Override
 	public RetailerInventoryModel addProduct(RetailerInventoryModel product) throws RetailerInventoryException {

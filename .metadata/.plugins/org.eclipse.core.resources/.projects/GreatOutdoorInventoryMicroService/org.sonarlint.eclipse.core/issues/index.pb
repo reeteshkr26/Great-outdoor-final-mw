@@ -21,3 +21,7 @@ u
 Esrc/main/java/com/cg/goim/controller/RetailerInventoryController.java,b\a\bafda11e4d33de512afcb18f579683622d757061
 s
 Csrc/main/java/com/cg/goim/service/RetailerInventoryServiceImpl.java,a\2\a294ce2d08ae8d93bbe810de6150f3e86029ad3b
+a
+1src/main/java/com/cg/goim/model/ProductModel.java,1\c\1c2f47b5dd6f8c78176a1bd42b98ad710143de2b
+j
+:src/main/java/com/cg/goim/service/ProductProxyService.java,c\3\c32dabe408586eef278b7f837d52eaac8e3fa919

@@ -15,15 +15,9 @@ public class RetailerInventoryEntity {
 	
 	@Column(name = "retailer_id", nullable = false)
 	private String retailerId;
-
-	@Column(name = "product_category", nullable = false)
-	private String productCategory;
 	
 	@Column(name = "product_id", nullable = false)
 	private String productId;
-	
-	@Column(name = "product_name", nullable = false)
-	private String productName;
 	
 	@Column(name = "product_quantity", nullable = false)
 	private int productQuantity;
@@ -55,15 +49,6 @@ public class RetailerInventoryEntity {
 		this.retailerId = retailerId;
 	}
 
-	public String getProductCategory() {
-		return productCategory;
-	}
-
-	public void setProductCategory(String productCategory) {
-		this.productCategory = productCategory;
-	}
-
-	
 	public String getProductId() {
 		return productId;
 	}
@@ -72,13 +57,6 @@ public class RetailerInventoryEntity {
 		this.productId = productId;
 	}
 
-	public String getProductName() {
-		return productName;
-	}
-
-	public void setProductName(String productName) {
-		this.productName = productName;
-	}
 
 	public Integer getProductQuantity() {
 		return productQuantity;

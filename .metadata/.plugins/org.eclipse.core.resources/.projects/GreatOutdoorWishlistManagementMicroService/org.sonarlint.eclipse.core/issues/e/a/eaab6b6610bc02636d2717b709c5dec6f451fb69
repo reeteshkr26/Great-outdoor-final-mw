@@ -1,8 +1,7 @@
 
-a
-java:S1452>"&Remove usage of generic wildcard type.(üû×Âúÿÿÿÿ8ç»¦ÞŸ.Hâ
-RCRITICALZ
-CODE_SMELL
 \
-java:S14522"&Remove usage of generic wildcard type.(ŒÒùþ8Û–Ç‰ .HíRCRITICALZ
+java:S14522"&Remove usage of generic wildcard type.(ŒÒùþ8Û–Ç‰ .HîRCRITICALZ
+CODE_SMELL
+a
+java:S1452>"&Remove usage of generic wildcard type.(üû×Âúÿÿÿÿ8ç»¦ÞŸ.HïRCRITICALZ
 CODE_SMELL
