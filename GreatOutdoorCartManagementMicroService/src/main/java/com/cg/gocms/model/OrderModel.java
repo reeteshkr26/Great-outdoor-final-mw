@@ -21,6 +21,9 @@ public class OrderModel {
 	private LocalDate orderInitiateTime; 
 	 @DateTimeFormat(iso = ISO.DATE)
 	private LocalDate orderDispatchTime;
+	 
+	 private AddressModel addressModel;
+	 private ProductModel productModel;
 	public long getId() {
 		return id;
 	}
@@ -88,6 +91,20 @@ public class OrderModel {
 	public void setItemQuantity(long itemQuantity) {
 		this.itemQuantity = itemQuantity;
 	}
+	public AddressModel getAddressModel() {
+		return addressModel;
+	}
+	public void setAddressModel(AddressModel addressModel) {
+		this.addressModel = addressModel;
+	}
+	public ProductModel getProductModel() {
+		return productModel;
+	}
+	public void setProductModel(ProductModel productModel) {
+		this.productModel = productModel;
+	}
+	
+	
 	
 	
 

@@ -105,10 +105,23 @@ public class OrderController {
 		}
 		
 	}
+
+	@GetMapping("/orders")
+	public ResponseEntity<List<OrderModel>> getAllOrders(){
+		ResponseEntity<List<OrderModel>> response=null;
+		List<OrderModel> orderList=orderService.getAllOrders();
+		if(orderList==null) {
+			response=new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}
+		else {
+			response=new ResponseEntity<>(orderList,HttpStatus.OK);
+		}
+		return response;
+	}
+	
 	public int getOrderId() {
 	    Random r = new Random( System.currentTimeMillis() );
 	    return 10000 + r.nextInt(20000);
 	}
-
 	
 }

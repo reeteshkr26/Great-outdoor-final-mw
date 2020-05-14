@@ -1,7 +1,13 @@
 
 `
-java:S1611Y"4Remove the parentheses around the "entity" parameter( ©ÚêHÝRMINORZ
+java:S1611h"4Remove the parentheses around the "entity" parameter( ©ÚêH»RMINORZ
 CODE_SMELL
 _
-java:S1612Y",Replace this lambda with a method reference.( ©Úê8«¡²ØŸ.HÞRMINORZ
+java:S1612|",Replace this lambda with a method reference.(€Ý¦¶8¨ù•ð .H¼RMINORZ
+CODE_SMELL
+_
+java:S1612h",Replace this lambda with a method reference.( ©Úê8«¡²ØŸ.HºRMINORZ
+CODE_SMELL
+g
+java:S1611|"4Remove the parentheses around the "entity" parameter(€Ý¦¶8¨ù•ð .H½RMINORZ
 CODE_SMELL

@@ -10,5 +10,6 @@ public interface OrderService {
 	 public List<OrderModel> placeOrder(List<OrderModel> model) throws OrderException;
 	 public List<OrderModel> getAllOrderList(String userId);
 	 public OrderModel getOrderByOrderId(String orderId);
+	 public List<OrderModel> getAllOrders(); 
 	 public void updateDispatchStatus(String orderId,int code) throws OrderException;
 }

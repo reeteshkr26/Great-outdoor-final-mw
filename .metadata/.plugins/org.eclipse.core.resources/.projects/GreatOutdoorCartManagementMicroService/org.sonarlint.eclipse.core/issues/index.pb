@@ -37,3 +37,7 @@ m
 -src/main/java/com/cg/gocms/dao/OrderRepo.java,9\6\96ed5b33bbd592742ea9a294b7e574809f5e5e7c
 \
 ,src/main/java/com/cg/gocms/dao/CartRepo.java,c\9\c9606df62ee3829bd66b3a1e7501da7edd386854
+b
+2src/main/java/com/cg/gocms/model/AddressModel.java,0\8\0800bcc18b6450ce0f9950c07e1ba3b4c92fa172
+k
+;src/main/java/com/cg/gocms/service/AddressProxyService.java,d\4\d42d2eae125a05b37a2b628129458626a284a93d

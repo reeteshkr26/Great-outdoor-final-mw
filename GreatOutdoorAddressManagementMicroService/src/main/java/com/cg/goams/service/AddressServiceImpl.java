@@ -87,11 +87,11 @@ public class AddressServiceImpl implements AddressService{
 	@Override
 	public AddressModel updateAddress(AddressModel model) throws AddressException {
 		if(model!=null) {
-			if(!(addressRepo.findById(model.getAddressId()).isPresent())) {
-				throw new AddressException("Address does not exist !");
+			if(addressRepo.existsById(model.getAddressId())) {
+				model=of(addressRepo.save(of(model)));	
 			}
 			else {
-				model=of(addressRepo.save(of(model)));
+				throw new AddressException("Address does not exist !");
 			}
 		}
 		return model;

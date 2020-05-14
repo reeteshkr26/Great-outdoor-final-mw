@@ -11,12 +11,20 @@ import org.springframework.stereotype.Service;
 import com.cg.gocms.dao.OrderRepo;
 import com.cg.gocms.entity.OrderEntity;
 import com.cg.gocms.exception.OrderException;
+import com.cg.gocms.model.AddressModel;
 import com.cg.gocms.model.OrderModel;
+import com.cg.gocms.model.ProductModel;
 
 @Service
 public class OrderServiceImpl implements OrderService{
 	@Autowired
 	private OrderRepo repo;
+	
+	@Autowired 
+	private ProductProxyService productProxy;
+	
+	@Autowired 
+	private AddressProxyService addressProxy;
 
 	@Autowired
 	private CartItemService service;
@@ -55,6 +63,13 @@ public class OrderServiceImpl implements OrderService{
 			result.setOrderInitiateTime(source.getOrderInitiateTime());
 			result.setOrderDispatchTime(source.getOrderDispatchTime());
 			result.setDispatchStatus(source.getDispatchStatus());
+			
+			ProductModel productModel=productProxy.getProduct(source.getProductId());
+			AddressModel addressModel=addressProxy.getAddressById(source.getAddressId());
+			if(productModel!=null && addressModel!=null) {
+				result.setAddressModel(addressModel);
+				result.setProductModel(productModel);
+			}
 		
 		}
 		return result;
@@ -103,6 +118,10 @@ public class OrderServiceImpl implements OrderService{
 		}
 		
 		
+	}
+	@Override
+	public List<OrderModel> getAllOrders() {
+		return repo.findAll().stream().map((entity)->of(entity)).collect(Collectors.toList());
 	}
 	
 	

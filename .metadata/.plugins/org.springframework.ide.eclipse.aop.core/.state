@@ -2,14 +2,13 @@
 <aop-reference-model>
 <aop-project name="GreatOutdoorCartManagementMicroService"/>
 <aop-project name="GreatOutdoorAdminReportMicroService"/>
-<aop-project name="GreatOutdoorProductMicroService"/>
-<aop-project name="GreatOutdoorInventoryMicroService"/>
-<aop-project name="GreatOutdoorUserManagementMicroService"/>
-<aop-project name="GreatOutdoorWishlistManagementMicroService"/>
-<aop-project name="GreatOutdoorAddressManagementMicroService"/>
-<aop-project name="EcommerceCartMicroservice"/>
 <aop-project name="GreatOutdoorDiscoveryMicroService"/>
 <aop-project name="GreatOutdoorCartMicroService"/>
 <aop-project name="GreatOutdoorExternalConfigMicroService"/>
+<aop-project name="GreatOutdoorProductMicroService"/>
+<aop-project name="GreatOutdoorInventoryMicroService"/>
 <aop-project name="GreatOutdoorGatewayMicroService"/>
+<aop-project name="GreatOutdoorUserManagementMicroService"/>
+<aop-project name="GreatOutdoorWishlistManagementMicroService"/>
+<aop-project name="GreatOutdoorAddressManagementMicroService"/>
 </aop-reference-model>

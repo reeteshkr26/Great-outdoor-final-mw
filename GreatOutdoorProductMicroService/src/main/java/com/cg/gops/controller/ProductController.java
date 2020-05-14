@@ -74,6 +74,14 @@ public class ProductController {
 	        productService.deleteProduct(id);
 	        return ResponseEntity.ok(true);
 	    }
+	    /*
+	     * For Admin Report
+	    */
+	    @GetMapping("/products/getAll")
+	    public List<ProductModel> getAllProductList() {
+	  
+	        return productService.getAllProductList();
+	    }
 	    
 	    public int getProductId() {
 		    Random r = new Random( System.currentTimeMillis() );

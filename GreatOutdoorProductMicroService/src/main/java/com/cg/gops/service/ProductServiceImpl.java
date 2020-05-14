@@ -99,5 +99,10 @@ public class ProductServiceImpl implements ProductService{
 			productRepository.save(entity);
 		}
 	}
+	@Override
+	public List<ProductModel> getAllProductList() {
+	
+		return productRepository.findAll().stream().map((entity)->of(entity)).collect(Collectors.toList());
+	}
 
 }
